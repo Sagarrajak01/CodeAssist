@@ -1,0 +1,27 @@
+{
+  "name": "codeassist-backend",
+  "version": "1.0.0",
+  "description": "Production-ready backend API for CodeAssist",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rag",
+    "codeassist"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "helmet": "^7.2.0",
+    "mongoose": "^8.24.1",
+    "morgan": "^1.11.0"
+  }
+}
