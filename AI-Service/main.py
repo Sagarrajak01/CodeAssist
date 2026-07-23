@@ -51,7 +51,7 @@ async def api_chat(req: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# NEW: Endpoint to delete vector collection when repo is deleted
+# Endpoint to delete vector collection when repo is deleted
 @app.delete("/api/ai/repos/{repo_id}")
 async def api_delete_repo(repo_id: str):
     try:
