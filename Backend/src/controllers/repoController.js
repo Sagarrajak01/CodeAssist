@@ -60,8 +60,42 @@ const getRepos = async (req, res, next) => {
   }
 };
 
+const deleteRepo = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const userId = req.user._id;
+    
+    // Call the service to delete files, DB record, and Chroma collection
+    await repoService.deleteRepository(userId, id);
+    
+    res.status(200).json({
+      success: true,
+      message: 'Repository deleted successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Python Microservice
+const updateRepoStatus = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+    
+    const Repository = require('../models/Repository');
+    await Repository.findByIdAndUpdate(id, { status });
+
+    res.status(200).json({ success: true, message: 'Status updated' });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   uploadRepo,
   cloneRepo,
-  getRepos
+  getRepos,
+  deleteRepo,
+  updateRepoStatus
 };
