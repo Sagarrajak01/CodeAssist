@@ -52,7 +52,7 @@ The platform indexes repository source code into a vector database using Retriev
 
 | Dashboard | Repository | AI Chat |
 |-----------|------------|---------|
-| ![](Frontend/assets/dashboard.png) | ![](Frontend/assets/repository.png) | ![](Frontend/assets/chat.png) |
+| ![](assets/dashboard.png) | ![](assets/repository.png) | ![](assets/chat.png) |
 
 ---
 
