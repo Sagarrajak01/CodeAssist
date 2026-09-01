@@ -229,7 +229,7 @@ CodeAssist
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/codeassist.git
+git clone https://github.com/sagarrajak01/codeassist.git
 
 cd CodeAssist
 ```
